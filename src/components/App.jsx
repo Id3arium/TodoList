@@ -10,6 +10,7 @@ function App() {
     setItems((prev) => {
       return [...prev, inputText];
     });
+    setInputText("");
   }
   return (
     <div className="container">
