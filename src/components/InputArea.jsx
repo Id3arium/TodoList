@@ -9,7 +9,7 @@ export default function InputArea(props) {
 
   return (
     <div className="form">
-      <input type="text" onChange={props.handleChange} value={inputText} />
+      <input type="text" onChange={handleChange} value={inputText} />
       <button
         onClick={() => {
           props.onAdd(inputText);
