@@ -7,5 +7,12 @@ export default function TodoItem(props) {
       return !prev;
     });
   };
-  return <li onClick={handleClick}>{props.text}</li>;
+  return (
+    <li
+      onClick={handleClick}
+      style={{ textDecoration: isDone ? "line-through" : "none" }}
+    >
+      {props.text}
+    </li>
+  );
 }
