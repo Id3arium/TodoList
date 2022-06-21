@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import InputArea from "./InputArea";
 import TodoItem from "./TodoItem";
 function App() {
   const [inputText, setInputText] = useState("");
@@ -15,7 +16,7 @@ function App() {
 
   function deleteItem(id) {
     setItems((prevItems) => {
-      return prevItems.filter((item, i) => i !== id);
+      return prevItems.filter((item, i) => item !== id);
     });
   }
   return (
@@ -23,12 +24,7 @@ function App() {
       <div className="heading">
         <h1>To-Do List</h1>
       </div>
-      <div className="form">
-        <input type="text" onChange={handleChange} value={inputText} />
-        <button onClick={handleOnClick}>
-          <span>Add</span>
-        </button>
-      </div>
+      <InputArea on />
       <div>
         <ul>
           {items.map((item, i) => (
