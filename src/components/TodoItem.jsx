@@ -9,7 +9,9 @@ export default function TodoItem(props) {
   };
   return (
     <li
-      onClick={handleClick}
+      onClick={() => {
+        props.onChecked(props.id);
+      }}
       style={{ textDecoration: isDone ? "line-through" : "none" }}
     >
       {props.text}
