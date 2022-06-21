@@ -12,7 +12,7 @@ function App() {
 
   function deleteItem(id) {
     setItems((prevItems) => {
-      return prevItems.filter((item, i) => item !== id);
+      return prevItems.filter((item, i) => i !== id);
     });
   }
   return (
